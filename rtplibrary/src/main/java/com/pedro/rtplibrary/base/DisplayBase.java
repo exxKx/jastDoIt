@@ -97,7 +97,7 @@ public abstract class DisplayBase implements GetAacData, GetVideoData, GetMicrop
   public boolean prepareVideo(int width, int height, int fps, int bitrate, int rotation, int dpi) {
     this.dpi = dpi;
     boolean result =
-        videoEncoder.prepareVideoEncoder(width, height, fps, bitrate, rotation, true, 2,
+        videoEncoder.prepareVideoEncoder(width, height, fps, bitrate, rotation, true, 1,
             FormatVideoEncoder.SURFACE);
     if (glInterface != null) {
       glInterface = new OffScreenGlThread(context);
